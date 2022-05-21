@@ -1,0 +1,18 @@
+@import './header.scss';
+@import './homepage.scss';
+@import './characters.scss';
+@import './pagination.scss';
+@import './myWatchList.scss';
+
+.App {
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+

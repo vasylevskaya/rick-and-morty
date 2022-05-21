@@ -1,0 +1,28 @@
+.header {
+  background: rgb(141, 68, 113);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100px;
+  padding: 40px;
+
+  .navigation {
+    &_list {
+      padding: 0;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      list-style-type: none;
+
+      &_link {
+        color: white;
+        text-decoration: none;
+      }
+
+      &_link.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

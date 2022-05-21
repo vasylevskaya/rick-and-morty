@@ -1,0 +1,43 @@
+.my-watch-list-page {
+  &_form {
+    margin: 50px;
+    display: flex;
+    gap: 30px;
+
+    input {
+      width: 200px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(189, 186, 186);
+    }
+
+    button {
+      background: white;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100px;
+      border: 1px solid rgb(10, 242, 52);
+      color: rgb(10, 242, 52);
+      font-weight: 700;
+    }
+  }
+
+  &_list {
+    padding: 0;
+
+    &_item {
+      width: 330px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        background: white;
+        border: none;
+        color: rgb(242, 29, 10);
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.characters {
+  &_table {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 10px;
+
+    &_card {
+      border: black 1px solid;
+      border-radius: 15px;
+      height: 300px;
+      width: 200px;
+      cursor: pointer;
+
+      &_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          margin: 0;
+          font-size: 14px;
+        }
+  
+        p:first-of-type {
+          margin-bottom: 5px;
+        }
+      }
+
+      img {
+        width: 200px;
+        height: auto;
+        border-radius: 15px 15px 1px 1px;
+      }
+
+      &:hover {
+        -webkit-box-shadow: 0px 10px 10px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 0px 10px 10px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+      }
+    }
+  }
+
+  &_filters {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    &_inputs {
+      display: flex;
+      gap: 50px;
+
+      &_column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        p {
+          font-weight: 700;
+          align-self: center;
+
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    &_control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 20px;
+
+      &_button {
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+
+        &:hover {
+          -webkit-box-shadow: 0px 10px 10px -7px #0000007f, 5px 5px 15px 5px rgba(0,0,0,0); 
+          box-shadow: 0px 10px 10px -7px #0000007f, 5px 5px 15px 5px rgba(0,0,0,0);
+        }
+      }
+
+      &_button.button-apply {
+        border: 2px solid rgb(10, 242, 52);
+        color: rgb(10, 242, 52);
+      }
+
+      &_button.button-remove {
+        border: 2px solid rgb(242, 29, 10);
+        color: rgb(242, 29, 10);
+      }
+    }
+  }
+}
