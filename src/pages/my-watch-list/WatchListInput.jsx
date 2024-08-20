@@ -6,16 +6,23 @@ import { myWatchListState } from '../../recoil/atoms'
 
 const WatchListInput = () => {
   const [query, setQuery] = useState('')
+
   const setMyWatchListState = useSetRecoilState(myWatchListState)
+
   const handleInputChange = (e) => setQuery(e.target.value)
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (!query) return
+
     setMyWatchListState((prevState) => (
       [
         ...prevState,
         { text: query, completed: false, id: nanoid() }
       ]
     ))
+    setQuery('')
   }
 
   return (

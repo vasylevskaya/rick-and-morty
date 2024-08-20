@@ -9,3 +9,11 @@ export const initialCharacterFilters = {
   status: [],
   gender: []
 }
+
+const BASE_URL = '/rick-and-morty'
+
+export const ROUTES = {
+  HOME: `${BASE_URL}/`,
+  CHARACTERS: `${BASE_URL}/characters`,
+  WATCH_LIST: `${BASE_URL}/my-watch-list`
+}

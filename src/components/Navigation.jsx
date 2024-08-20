@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, useLocation } from "react-router-dom"
+import { ROUTES } from "../config/config"
 
 const Navigation = () => {
   let { pathname } = useLocation()
@@ -9,10 +10,10 @@ const Navigation = () => {
       <ul className="navigation_list">
         <li>
           <Link
-            to="/"
+            to={ROUTES.HOME}
             className={`
               navigation_list_link
-              ${pathname === '/' ? 'active' : ''}
+              ${pathname === ROUTES.HOME ? 'active' : ''}
             `}
           >
             Home
@@ -20,10 +21,10 @@ const Navigation = () => {
         </li>
         <li>
           <Link
-            to="/my-watch-list"
+            to={ROUTES.WATCH_LIST}
             className={`
               navigation_list_link
-              ${pathname === '/my-watch-list' ? 'active' : ''}
+              ${pathname === ROUTES.WATCH_LIST ? 'active' : ''}
             `}
           >
             My Watch List
@@ -31,10 +32,10 @@ const Navigation = () => {
         </li>
         <li>
           <Link
-            to="/characters"
+            to={ROUTES.CHARACTERS}
             className={`
               navigation_list_link
-              ${pathname === '/characters' ? 'active' : ''}
+              ${pathname === ROUTES.CHARACTERS ? 'active' : ''}
             `}
           >
             Characters
